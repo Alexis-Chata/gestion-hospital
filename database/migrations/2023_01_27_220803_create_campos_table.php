@@ -27,6 +27,7 @@ return new class extends Migration
             $table->string('param4')->nullable();
             $table->string('columna')->nullable();
             $table->foreignIdFor(TipoExamen::class)->constrained();
+            $table->string('estado')->default(1);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

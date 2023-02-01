@@ -45,4 +45,16 @@ class PageController extends Controller
     {
         return view("pages.sign-up-static");
     }
+
+    public function examenes() {
+        return view("pages.examenes");
+    }
+
+    public function usuarios() {
+        return view("pages.usuarios");
+    }
+
+    public function pacientes() {
+        return view("pages.pacientes");
+    }
 }

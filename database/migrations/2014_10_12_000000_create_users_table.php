@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('username');
             $table->string('firstname')->nullable();
             $table->string('lastname')->nullable();
+            $table->char('genero');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -27,6 +28,7 @@ return new class extends Migration
             $table->string('postal')->nullable();
             $table->text('about')->nullable();
             $table->rememberToken();
+            $table->string('estado')->default(1);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

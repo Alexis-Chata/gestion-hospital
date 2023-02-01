@@ -22,6 +22,7 @@ return new class extends Migration
             $table->foreignIdFor(Paciente::class)->constrained();
             $table->foreignIdFor(TipoExamen::class)->constrained();
             $table->foreignId('medico_id')->constrained('users');
+            $table->string('estado')->default(1);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });

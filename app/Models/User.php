@@ -60,4 +60,16 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    public function medico(){
+        return $this->hasOne(Medico::class);
+    }
+
+    public function examens(){
+        return $this->hasMany(Examen::class,'medico_id','id');
+    }
+
+    public function asignaciones(){
+        return $this->hasMany(Asignacion::class);
+    }
 }

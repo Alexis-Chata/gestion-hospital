@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('picture_tipo_examen')->nullable();
             $table->foreignIdFor(Categoria::class)->constrained();
+            $table->string('estado')->default(1);
             $table->timestamp('created_at')->useCurrent();
             $table->timestamp('updated_at')->useCurrent()->useCurrentOnUpdate();
         });
